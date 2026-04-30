@@ -128,5 +128,3 @@ console.log(Math.abs(-400));
 
 // Math random -> menghasilkan angka acak antara 0 dan 1
 console.log(Math.random());
-
-console.log("test");
