@@ -1,0 +1,206 @@
+// =========== IF STATEMENT ===========
+/* 
+    if(condition){
+        code block
+    }
+*/
+
+const age: number = 20;
+
+if (age >= 17) {
+  console.log("bisa buat ktp");
+}
+
+// =========== ELSE STATEMENT ===========
+// backup plan dari if statement
+
+const age2: number = 20;
+
+if (age2 >= 17) {
+  console.log("bisa buat ktp");
+} else {
+  console.log("belum bisa buat ktp");
+}
+
+// =========== ELSE IF STATEMENT ===========
+
+const grade: string = "B";
+
+if (grade === "A") {
+  console.log("nilai bagus");
+} else if (grade === "B") {
+  console.log("nilai lumayan");
+} else if (grade === "C") {
+  console.log("nilai buruk");
+} else {
+  console.log("nilai tidak diketahui");
+}
+
+// =========== SWITCH CASE ===========
+/* 
+    switch(value) {
+        case value1:
+            result
+            break
+        case value2:
+            result
+            break
+        case value3:
+            result
+            break
+        default:
+            result
+            break
+    }
+*/
+
+const day: string = "selasa";
+
+switch (day) {
+  case "senin":
+    console.log("hari senin");
+    break;
+  case "selasa":
+    console.log("hari selasa");
+    break;
+  case "rabu":
+    console.log("hari rabu");
+    break;
+  default:
+    console.log("hari tidak ditemukan");
+    break;
+}
+
+// =========== LOGICAL OPERATOR ===========
+// && -> and
+// || -> OR
+// ! -> not
+
+// AND -> harus keduanya bernilai true agar menghasilkan nilai true
+const umur: number = 18;
+const punyaSIM: boolean = false;
+
+if (umur >= 17 && punyaSIM) {
+  console.log("boleh bawa kendaraan");
+} else {
+  console.log("belum boleh bawa kendaraan");
+}
+
+// OR -> kalau salah 1 ada yang bernilai true, akan menghasilkan nilai true
+const car: string = "bmw";
+
+if (car === "bmw" || car === "mercy") {
+  console.log("kendaraan eropa");
+} else {
+  console.log("kendaraan jepang");
+}
+
+// NOT -> membalikkan nilai boolean
+const isSunny: boolean = true;
+const isRaining: boolean = !isSunny;
+
+console.log(isSunny);
+console.log(isRaining);
+
+// =========== TERNARY OPERATOR ===========
+// shortcut untuk penulisan if else condition
+
+/* 
+    condition ? true : false
+*/
+
+const str: string = "javascript";
+
+if (str === "javascript") {
+  console.log("javascript");
+} else {
+  console.log("not javascript");
+}
+
+console.log(str === "javascript" ? "javascript" : "not javascript");
+
+// condition ? true : condition ? true : false
+console.log(
+  str === "javascript"
+    ? "javascript"
+    : str === "typescript"
+      ? "typescript"
+      : "not found",
+);
+
+// =========== LOOP STATEMENT (perulangan) ===========
+// rangkaian instruksi yang dilakukan berulangkali hingga kondisinya tidak terpenuhi
+
+// type : for loop, while loop, do while loop
+
+/* 
+    FOR LOOP -> mempunyai 3 statement
+    statement 1 -> menginisialisasikan variable dari looping itu sendiri
+    statement 2 -> mendefine kondisi dari looping tsb
+    statement 3 -> kode yg dieksekusi diakhir setiap iterasi
+*/
+
+/* 
+    for(statement1; statement2; statement3) {
+        code block yang akan diulang
+    }
+*/
+
+for (let i = 0; i < 10; i++) {
+  console.log("Hello World");
+}
+
+// WHILE LOOP
+/* 
+    while(condition) {
+        code block yang akan diulang
+    }
+*/
+
+let i: number = 20;
+
+while (i < 10) {
+  console.log("Hello world");
+
+  i++;
+}
+
+// DO WHILE LOOP
+/*
+    do {
+        code block yang akan diulang
+    } while (condition);
+*/
+
+let count: number = 10;
+
+do {
+  console.log(count);
+  count++;
+} while (count <= 5);
+
+// =========== BREAK ===========
+// untuk menghentikan loop
+
+let sum: number = 0;
+
+while (true) {
+  console.log(sum);
+
+  if (sum >= 5) {
+    break;
+  }
+
+  sum++;
+}
+
+// =========== CONTINUE ===========
+// melakukan skip pada looping
+
+for (let i = 0; i < 5; i++) {
+  if (i === 2) {
+    continue;
+  }
+
+  console.log(i);
+}
